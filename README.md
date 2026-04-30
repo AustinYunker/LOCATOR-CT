@@ -3,10 +3,12 @@
 ## Overview    
 This project provides a sample localization method for tomography volumes using an unsupervised foreground detection approach. This benefits volumes that
 contain a large amount of background regions, relative to the sample, that can be safely trimmed away providing multiple benefits: 
--   Reduced disk space for storage, 
--   Improved data transfer rates, 
--   Easier user engagement, 
--   Improved performance and reduced training time for AI/ML tasks. 
+<ol>
+    <li>Reduced disk space for storage</li>
+    <li>Improved data transfer rates</li>
+    <li>Easier user engagement</li>
+    <li>Improved performance and reduced training time for AI/ML tasks</li>
+</ol>
 
 This is done based on the following core steps:
 -   Volume pre-processing
@@ -21,7 +23,7 @@ Finally, this method provides two key optimizations (not-enforced) to enable rea
 ## Installation   
 
 ``` bash
-git clone https://github.com/AISDC/Noise2Inverse360 localize
+git clone https://github.com/AISDC/LOCATOR-CT localize
 cd localize
 conda env create -f envs/localize_environment.yml
 conda activate localize
@@ -127,7 +129,9 @@ python main.py --n_cpus=12 --config=path_to_config/config.yaml --in_tiff_dir=/pa
 The file produces information regarding data loading/saving via a progress bar and reports how long the localization method took. However, it does not provide status/details on each step.  
 
 ## Localization Example
-temp
+<p align="center">
+  <img src="docs/source/img/localization_example2.svg" width="800">
+</p>
 
 
 ## Contributing    
