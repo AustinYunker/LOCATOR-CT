@@ -11,10 +11,12 @@ contain a large amount of background regions, relative to the sample, that can b
 </ol>
 
 This is done based on the following core steps:
--   Volume pre-processing
--   Sample detection via thresholding
--   Binary mask cleanup
--   Bounding box generation
+<ol>
+    <li>Volume pre-processing</li>
+    <li>Sample detection via thresholding</li>
+    <li>Binary mask cleanup</li>
+    <li>Bounding box generations</li>
+</ol>
 
 Finally, this method provides two key optimizations (not-enforced) to enable real time performance:
 -   Parallelization across multiple CPUs
@@ -92,7 +94,7 @@ Pre-processing contains four steps
 
 
 ### Sample Detection via Thresholding
-Sample detection can be done using either Otsu or Gaussian Mixture Model (GMM). However, is significantly slower and not recommended. For Otsu, a single threshold based on the full volume is generated rather than one threshold for each slice. This ensures consistency across the volume. From there, a binary mask is generated. 
+Sample detection can be done using either Otsu or Gaussian Mixture Model (GMM). However, GMM is significantly slower and not recommended. For Otsu, a single threshold based on the full volume is generated rather than one threshold for each slice. This ensures consistency across the volume. From there, a binary mask is generated. 
 
 
 ### Binary Mask Cleanup
@@ -108,7 +110,7 @@ This step generates the slice-wise bounding boxes using the following steps:
     </ul>
   <li>Union</li>
     <ul>
-        <li>After all slices are processed, the per-slice rectangle are merged into a single 3D cuboid producing the smallest cuboid that contains all sample pixels.</li>
+        <li>After all slices are processed, the per-slice rectangles are merged into a single 3D cuboid producing the smallest cuboid that contains all sample pixels.</li>
     </ul>
   <li>Refinement</li>
     <ul>
