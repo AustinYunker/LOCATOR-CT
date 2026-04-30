@@ -1,0 +1,15 @@
+stage0:
+  ds_z: 8 
+  ds_y: 8
+  ds_x: 8
+  p_low: 15.0
+  p_high: 85.0
+  circle_crop: True
+stage1:
+  method: "otsu"
+stage2:
+  z_smooth_win: 5
+stage3:
+  margin: 2
+stage3b:
+  connectivity: 26
