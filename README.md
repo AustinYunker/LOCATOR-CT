@@ -132,7 +132,7 @@ The file produces information regarding data loading/saving via a progress bar a
 
 ## Localization Example
 <p align="center">
-  <img src="docs/source/img/img.png" width="800">
+  <img src="docs/source/img/localization_example4.png" width="800">
 </p>
 
 
